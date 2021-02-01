@@ -8,7 +8,7 @@ Content-Type: application/json
 
 {
     "username": "rodnex",
-    "password": "12345678"
+    "password": "123456789"
 }
 
 ###
@@ -44,5 +44,5 @@ Content-Type: application/json
 
 {
     "password": "12345678",
-    "token": "09ac48fe-d846-4c24-aa9e-4b051ea42103"
+    "token": "1"
 }

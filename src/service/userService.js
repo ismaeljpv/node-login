@@ -68,7 +68,7 @@ const validateEmail = email => {
         (_err, rs) => {
             resolve(parseInt(rs.rows[0].count) === 0);
         });
-    })
+    });
 }
 
 const checkEmailStatus = idUser => {
@@ -80,7 +80,7 @@ const checkEmailStatus = idUser => {
         (_err, rs) => {
             resolve(parseInt(rs.rows[0].count) === 0);
         });
-    })
+    });
 }
 
 const verifyEmailByToken = token => {
@@ -96,7 +96,7 @@ const verifyEmailByToken = token => {
                 message: "Email verificado exitosamente."
             });
         });
-    })
+    });
 }
 
 const getUserInfoByEmail = email => {
@@ -119,7 +119,7 @@ const getUserInfoByEmail = email => {
                 data: rs.rows[0]
             });
         });
-    })
+    });
 }
 
 const updateUserPassword = (password, token) => {
@@ -135,7 +135,7 @@ const updateUserPassword = (password, token) => {
                 message: 'Contraseña actualizada exitosamente.'
             });
         });
-    })
+    });
 }
 
 module.exports = { 
