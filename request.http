@@ -1,0 +1,48 @@
+GET http://localhost:5000/auth/test 
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImlzbWFlbGpwdiIsInBhc3N3b3JkIjoiMTIzNCIsImlhdCI6MTYxMTk1NTQxNywiZXhwIjoxNjExOTczNDE3fQ.KfmfYSEHMSI39HpNrOjnfedTJULezqELI-izSK6d2ck
+
+###
+POST http://localhost:5000/auth/login 
+Content-Type: application/json
+
+{
+    "username": "rodnex",
+    "password": "12345678"
+}
+
+###
+POST http://localhost:5000/user/signIn
+Content-Type: application/json
+
+{
+    "firstname": "Cesar",
+    "lastname": "Peña",
+    "identification": "12312112",
+    "phone": "+58 412 9981231",
+    "email": "cesar1@gmail.com",
+    "username": "rodnex1",
+    "password": "12345678"
+}
+
+###
+GET http://localhost:5000/user/emailVerification
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFBlcnNvbiI6MjUsImlkVXNlciI6MTMsImZpcnN0bmFtZSI6IkNlc2FyIiwibGFzdG5hbWUiOiJQZcOxYSIsImlkZW50aWZpY2F0aW9uIjoiMTIzMTIxMTIiLCJlbWFpbCI6ImNlc2FyQGdtYWlsLmNvbSIsInBob25lIjoiKzU4IDQxMiA5OTgxMjMxIiwiYXV0aG9yaXRpZXMiOlsiVVNFUiJdLCJpYXQiOjE2MTIxMjc5OTcsImV4cCI6MTYxMjE0NTk5N30.6Y-5K7KaVpfIhYM1_FPabmzhlTSDBw5p1Oi2_WXYqh0
+
+###
+GET http://localhost:5000/user/verifyEmail/b68acfc9-9705-4930-9a6c-57ed17385725
+Content-Type: application/json
+
+###
+GET http://localhost:5000/user/passwordRecovery/ismaeljpv14@gmail.com
+Content-Type: application/json
+
+###
+POST http://localhost:5000/user/passwordRecovery
+Content-Type: application/json
+
+{
+    "password": "12345678",
+    "token": "09ac48fe-d846-4c24-aa9e-4b051ea42103"
+}
